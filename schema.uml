@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DATABASE</ID>
+  <OriginalElement>33aacbe8-0417-4085-b81e-7986f18ff6a7.SCHEMA:contacts.public</OriginalElement>
+  <nodes>
+    <node x="114.0" y="-60.0">33aacbe8-0417-4085-b81e-7986f18ff6a7.TABLE:contacts.public.mobile_number</node>
+    <node x="7.5" y="132.0">33aacbe8-0417-4085-b81e-7986f18ff6a7.TABLE:contacts.public.contact_numbers</node>
+    <node x="-97.0" y="-82.0">33aacbe8-0417-4085-b81e-7986f18ff6a7.TABLE:contacts.public.contact</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="33aacbe8-0417-4085-b81e-7986f18ff6a7.TABLE:contacts.public.contact_numbers" target="33aacbe8-0417-4085-b81e-7986f18ff6a7.TABLE:contacts.public.contact" relationship="REFERENCES">
+      <point x="-48.25" y="-37.5" />
+      <point x="55.75" y="107.0" />
+      <point x="-1.5" y="107.0" />
+      <point x="0.0" y="82.0" />
+    </edge>
+    <edge source="33aacbe8-0417-4085-b81e-7986f18ff6a7.TABLE:contacts.public.contact_numbers" target="33aacbe8-0417-4085-b81e-7986f18ff6a7.TABLE:contacts.public.mobile_number" relationship="REFERENCES">
+      <point x="48.25" y="-37.5" />
+      <point x="152.25" y="107.0" />
+      <point x="209.5" y="107.0" />
+      <point x="0.0" y="60.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.0" showDependencies="false" x="104.0" y="62.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Columns</Category>
+    <Category>Comments</Category>
+    <Category>Key columns</Category>
+    <Category>Virtual foreign keys</Category>
+  </Categories>
+</Diagram>
+

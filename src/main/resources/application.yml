@@ -1,0 +1,96 @@
+# ===============================
+# = DATA SOURCE / JPA / HIBERNATE
+# ===============================
+
+spring:
+  application:
+    name: contacts-api
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        hbm2ddl:
+          auto: update
+        show_sql: true
+
+    open-in-view: false
+
+  datasource:
+    tomcat:
+      test-while-idle: true
+    url: jdbc:postgresql://localhost:5432/contacts
+    username: marlvin
+    password: marlvin123
+
+# ===============================
+# = APPLICATION / ERROR HANDLING
+# ===============================
+
+server:
+  error:
+    include-message: always
+    include-binding-errors: always
+  port: 8081
+
+info:
+  app:
+    name: Contacts API
+    description: Contacts API
+    version: 1.0
+    basePackage: zw.dreamhub
+  contact:
+    name: Marlvin Chihota
+    url: https://www.marlvinzw.me
+    email: hello@marlvinzw.me
+
+# ===============================
+# = ACTUATOR
+# ===============================
+
+management:
+  endpoint:
+    auditevents:
+      enabled: true
+    loggers:
+      enabled: true
+    metrics:
+      enabled: true
+    info:
+      enabled: true
+    health:
+      group:
+        8dh:
+          show-components: always
+          show-details: always
+          include:
+            - diskSpace
+            - ping
+            - readinessProbe
+            - info
+      show-details: always
+
+    # ==========================================
+    # APP CONFIGS
+    # ==========================================
+
+app:
+  application:
+    defaultAppName: Contacts API
+  url:
+    unSecured: /api/v1/public
+    secured: /api/v1
+
+    # ==========================================
+    # SPRING DOC
+    # ==========================================
+
+springdoc:
+  show-actuator: true
+
+  # ==========================================
+  # ZALANDO LOGGING
+  # ==========================================
+
+logging:
+  level:
+    org.zalando.logbook: TRACE
